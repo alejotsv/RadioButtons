@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class RadioButtons extends JFrame {
-    Dimension dim = new Dimension(320, 120);
+    Dimension dim = new Dimension(380, 120);
 
     RadioButtons(String title, String[] buttons, String message){
         super(title);
@@ -13,6 +13,12 @@ public class RadioButtons extends JFrame {
         JLabel messageLabel = new JLabel(message);
         panel.add(messageLabel);
         addButtons(buttons, panel);
+
+        JButton save = new JButton("Save");
+        JButton cancel = new JButton("Cancel");
+
+        panel.add(save);
+        panel.add(cancel);
 
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
