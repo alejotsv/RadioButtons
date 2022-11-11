@@ -6,12 +6,23 @@ import java.awt.*;
 public class RadioButtons extends JFrame {
     Dimension dim = new Dimension(300, 200);
 
-    RadioButtons(String title){
+    RadioButtons(String title, String[] buttons, String message){
         super(title);
         setSize(dim);
-
+        JPanel panel = new JPanel();
+        JLabel messageLabel = new JLabel(message);
+        panel.add(messageLabel);
+        addButtons(buttons, panel);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        add(panel);
         setVisible(true);
+        pack();
+    }
+
+    void addButtons(String[] buttons, JPanel panel){
+        for(int i=0; i<buttons.length; i++){
+            System.out.println(buttons[i]);
+        }
     }
 }
